@@ -4,11 +4,14 @@ const sketchGrid = document.getElementById("sketch-grid");
 
 // Setup the Etch-a-sketch grid
 
-for (var i = 0; i <= 256; i++) {
+function makeRows(rows, cols) {
+    sketchGrid.style.setProperty("--grid-rows", rows);
+    sketchGrid.style.setProperty("--grid-cols", cols);
+    for (var i = 0; i < (rows * cols); i++) {
 
-    var divBlock = document.createElement("div");
-    divBlock.classList.add("div-block");
+        var divBlock = document.createElement("div");
+        divBlock.classList.add("div-block");
 
-    sketchGrid.appendChild(divBlock);
-
+        sketchGrid.appendChild(divBlock);
+    }
 }
