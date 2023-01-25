@@ -15,3 +15,5 @@ function makeRows(rows, cols) {
         sketchGrid.appendChild(divBlock);
     }
 }
+
+makeRows(16, 16);
