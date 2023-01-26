@@ -9,10 +9,17 @@ function makeRows(rows, cols) {
     sketchGrid.style.setProperty("--grid-cols", cols);
     for (var i = 0; i < (rows * cols); i++) {
 
-        var divBlock = document.createElement("div");
+        const divBlock = document.createElement("div");
         divBlock.classList.add("div-block");
 
         sketchGrid.appendChild(divBlock);
+
+        // Changing Div Block Color
+
+        divBlock.addEventListener("mouseover", function() {
+            divBlock.classList.remove("div-block");
+            divBlock.classList.add("div-block-hovered");
+        })
     }
 }
 
